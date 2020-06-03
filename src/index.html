@@ -3,16 +3,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Level Up - CEP - API</title>
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="./app/public/css/style.css">    
     <style>
         /* Set the size of the div element that contains the map */
-        .map {
-        height: 400px;
+        .map {            
+        height: 100%;
         width: 100%;
       }
-      </style>
-      <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+      </style>      
 </head>
 <body>
     <nav class="shadow">
@@ -53,38 +51,19 @@
                     </div>
                     <div class="form-row">
                         <a class="btn btn-search" data-search>Buscar</a>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </section>
         <section class="w-65 p-10" data-map>
-            <div class="result-search">
-                <h2 class="endereco" data-address></h2>
-                <p class="" data-hood></p>
-                <p class="" data-city></p>
-                <p class="" data-cep-result></p>
-                <!--The div element for the map -->
-                <div id="map" class="map"></div>
-            </div>
+            <div class="result-search"></div>
+            <div id="map" class="map"></div>
         </section>
     </div>
-    <script type="module" src="../public/js/main.js"></script> 
-    <script>
-        // Initialize and add the map
-        function initMap() {
-          // The location of Uluru
-          
-          var uluru = {lat: -23.499584, lng: -46.5555379};
-          // The map, centered at Uluru
-          var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 4, center: uluru});
-          // The marker, positioned at Uluru
-          var marker = new google.maps.Marker({position: uluru, map: map});
-        }
-            </script>
-    <!-- <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8&callback=initMap">
-</script> -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8">
+    </script>
+    <script type="module" src="./app/public/js/main.js"></script>  
 <!-- https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8
 
 https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8 -->

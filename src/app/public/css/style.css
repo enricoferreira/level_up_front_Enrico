@@ -3,7 +3,23 @@ body, ul, li, a{
     padding: 0;
     text-decoration: none;
     list-style-type: none;
+    font-family: 'metropolis';
+    src:
+         url('../../assets/fonts/metropolis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src:
+         url('../../assets/fonts/metropolis-regular-webfont.woff') format('woff');
+    
+  }
 
 nav{
     display: flex;         
@@ -72,6 +88,11 @@ nav li.nav-logo{
     border-radius: 5px;
 }
 
+.header{
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
 .card .header-card, .body-card{
     padding: 5px;
 }
@@ -117,3 +138,82 @@ input.form-field{
     transition: .3s;
     cursor: pointer;
 }
+
+.alert{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.error{
+    color: #9f3a38;
+    border-color: rgb(218, 63, 63);
+    background: #fff6f6;
+    margin-bottom: 15px;
+}
+
+
+
+
+/* KEY FRAMES - ANIMATION */
+.shake-horizontal {
+	-webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+ @-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+  @keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+  
