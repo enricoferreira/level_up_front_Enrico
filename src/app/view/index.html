@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Level Up - CEP - API</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <style>
+        /* Set the size of the div element that contains the map */
+        .map {
+        height: 400px;
+        width: 100%;
+      }
+      </style>
+      <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+</head>
+<body>
+    <nav class="shadow">
+        <ul>
+            <li class="nav-logo">
+                <a href="#">Buscar Cep</a>
+            </li>
+            <li>
+                <a href="#">CSS</a>
+            </li>
+            <li>
+                <a href="#">Componentes</a>
+            </li>
+            <li>
+                <a href="#">Javascript</a>
+            </li>
+            <li>
+                <a href="#">HTML</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="d-flex justify-content-center container">
+        <section class="w-35 p-10 d-flex align-items-center justify-content-center direction-column" data-cep>
+            <div class="card shadow">
+                <div class="header-card">
+                    <h3 class="header">
+                        Digite um CEP
+                    </h3>
+                    <i>
+                        <small class="d-none">
+                            Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil
+                        </small>
+                    </i>
+                </div>
+                <div class="body-card d-flex justify-content-center direction-column">
+                    <div class="form-row">
+                        <input type="text" placeholder="xxxxx-xxx" maxlength="8" class="form-field fluid" data-input-cep>
+                    </div>
+                    <div class="form-row">
+                        <a class="btn btn-search" data-search>Buscar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-65 p-10" data-map>
+            <div class="result-search">
+                <h2 class="endereco" data-address></h2>
+                <p class="" data-hood></p>
+                <p class="" data-city></p>
+                <p class="" data-cep-result></p>
+                <!--The div element for the map -->
+                <div id="map" class="map"></div>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="../public/js/main.js"></script> 
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          
+          var uluru = {lat: -23.499584, lng: -46.5555379};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 4, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+            </script>
+    <!-- <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8&callback=initMap">
+</script> -->
+<!-- https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8
+
+https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8 -->
+</body>
+</html>

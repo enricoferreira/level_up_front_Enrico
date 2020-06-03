@@ -1,0 +1,11 @@
+{
+  "name": "level_up_desafio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/enricoferreira/desafio_front_end_levelUp.git",
+  "author": "Enrico Augusto Ferreira",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
