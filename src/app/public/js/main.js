@@ -25,8 +25,7 @@ btnPesquisar.addEventListener('click', ()=>{
             })
             .catch(erro=>{                
                 console.log(erro);                
-            })
-            
+            })            
         }).catch((err) => {
            console.log(err);
         });
