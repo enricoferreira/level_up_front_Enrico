@@ -10,11 +10,10 @@
 </head>
 <body>
     <nav class="shadow">
-        <ul class="d-none">
-            <li>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg></a>
-            </li>
-        </ul>
+        
+        
+        <a class="mobile menu-icon" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg></a>
+        
         <ul>
             <li class="nav-logo active">
                 <a href="#">Buscar Cep</a>
@@ -54,20 +53,22 @@
                     <div class="form-row">
                         <a class="btn btn-search" data-search>Buscar</a>
                     </div>
-                </div>
+                </div>               
             </div>
+            <div class="error-msg"></div>
         </section>
         <section class="d-none all-results mt-10" data-map>
-            <div class="fluid result-search d-flex direction-column justify-content-center"></div>
+            <!-- <div class="fluid result-search d-flex direction-column justify-content-center"></div> -->
             <div class="card fluid shadow">
                 <div class="header-card">
                     <h3 class="header">
                         Mapa
                     </h3>
                 </div>
+                <div class="body-card result-search d-flex direction-column"></div>
                 <div class="body-card">
                     <div id="map" class="map"></div>
-                </div>
+                </div>                
             </div>
         </section>
     </div>
@@ -75,5 +76,18 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8">
     </script>
     <script type="module" src="./app/public/js/main.js"></script>  
+    <script src="./app/public/js/module/effects/navbar.js"></script>
+    <script>
+        // const cepInput = document.querySelector('[data-input-cep]');
+        // cepInput.addEventListener('keydown', (e)=>{
+        //     console.log(e);
+            
+        //     const char = e.key;
+        //     const result = /[0-9]{8}$/.test(char);
+        //     console.log(result);
+            
+            
+        // })
+    </script>
 </body>
 </html>

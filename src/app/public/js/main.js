@@ -5,7 +5,7 @@ import { renderMap } from '../js/module/map/maps-function.js';
 import { searchLatLong } from '../js/urlKey.js';
 
 const btnPesquisar = document.querySelector('[data-search]');
-const cepInput = document.querySelector('[data-input-cep]');
+export const cepInput = document.querySelector('[data-input-cep]');
 
 window.addEventListener('load', ()=>{
     navigator.geolocation.getCurrentPosition(position => {
