@@ -1,0 +1,25 @@
+body, ul, li, a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'metropolis';
+    src: url('../../assets/fonts/metropolis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(99, 98, 98);
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    margin:.5em;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../../assets/fonts/metropolis-regular-webfont.woff') format('woff');    
+  }
