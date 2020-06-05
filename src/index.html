@@ -34,15 +34,14 @@
     <div class="container">
         <section class="d-flex direction-column align-items-center justify-content-center" data-info data-cep>
             <div class="card shadow">
-                <div class="header-card">
+                <div class="header-card d-flex justify-content-between">
                     <h3 class="header">
                         Digite um CEP
                     </h3>
-                    <i>
-                        <small class="d-none">
-                            Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil
-                        </small>
-                    </i>
+                    <a class="pointer-icon" data-tooltip="Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="darkgrey"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <!-- <div class="tooltip-msg"></div> -->
+                    </a>                    
                 </div>
                 <div class="body-card d-flex justify-content-center direction-column">
                     <div class="form-row">
@@ -75,18 +74,6 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDlk6O71OM4rpzCV31colJ0CxzyM7ViZ8">
     </script>
     <script type="module" src="./app/public/js/main.js"></script>  
-    <script src="./app/public/js/module/effects/navbar.js"></script>
-    <script>
-        // const cepInput = document.querySelector('[data-input-cep]');
-        // cepInput.addEventListener('keydown', (e)=>{
-        //     console.log(e);
-            
-        //     const char = e.key;
-        //     const result = /[0-9]{8}$/.test(char);
-        //     console.log(result);
-            
-            
-        // })
-    </script>
+    <script src="./app/public/js/module/effects/navbar.js"></script>       
 </body>
 </html>

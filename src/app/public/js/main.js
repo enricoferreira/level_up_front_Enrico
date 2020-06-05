@@ -3,6 +3,9 @@ import { validate } from './module/validation/validation.js';
 import { populateResults } from './module/view-update/update-view.js';
 import { renderMap } from '../js/module/map/maps-function.js';
 import { searchLatLong } from '../js/urlKey.js';
+import { tooltipInit } from '../js/module/effects/tooltip.js';
+
+tooltipInit();
 
 const btnPesquisar = document.querySelector('[data-search]');
 export const cepInput = document.querySelector('[data-input-cep]');

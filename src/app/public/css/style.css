@@ -122,8 +122,29 @@ nav li.nav-logo{
     align-items: center;
 }
 
+.justify-content-between{
+    justify-content: space-between;
+}
+
 .mt-10{
     margin-top: 10px;
+}
+
+[data-tooltip]{
+    position: relative;    
+}
+
+.tooltip{
+    position: absolute;
+    color: rgb(122, 119, 119);
+    padding: 10px;
+    border: 1px solid rgb(122, 119, 119);
+    background: rgba(173, 173, 172, 0.438);    
+    border-radius: 5px;
+}
+
+.pointer-icon{
+    cursor: pointer;
 }
 
 .d-flex{
